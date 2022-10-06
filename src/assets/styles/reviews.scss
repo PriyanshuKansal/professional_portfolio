@@ -1,0 +1,207 @@
+@import "./base.scss";
+
+.reviews {
+  position: relative;
+  height: 100px;
+  background: $dblue;
+  color: white;
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .instructor {
+      position: relative;
+      background: #28316013;
+      box-shadow: 0 8px 32px 0 $box-shadow-blue1;
+      &__curve {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        width: 30%;
+        height: 120%;
+        border-left: 2px solid $red;
+        border-radius: 50%;
+        transform: rotate(-20deg);
+        box-shadow: 0 8px 32px 0 $box-shadow-blue2;
+      }
+      &__infos {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 14px;
+        font-family: sans-serif;
+      }
+      &__img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border-right: 2px solid $red;
+        @media (min-width: 400px) {
+          width: 150px;
+          height: 150px;
+        }
+      }
+      &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      &__info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.svgReviewicon .arrowIcon {
+  filter: invert(100%) sepia(0%) saturate(7427%) hue-rotate(48deg)
+    brightness(108%) contrast(99%);
+}
+
+.swiper__wrapper {
+  padding: 2rem 0;
+}
+
+.swiper {
+  user-select: none;
+}
+
+.quoteSvg {
+  width: 25px;
+  filter: invert(22%) sepia(78%) saturate(7212%) hue-rotate(358deg)
+    brightness(107%) contrast(126%);
+  position: absolute;
+  top: 32.5px;
+  @media (min-width: 500px) {
+    width: 30px;
+  }
+}
+
+.review {
+  position: relative;
+  display: flex;
+  font-size: 16px;
+  padding: 5px;
+  &__card {
+    position: absolute;
+    width: 100%;
+    left: 27.5px;
+    padding: 3rem 0;
+    display: flex;
+  }
+  &__topborder {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: #fff;
+    @media (max-width: 650px) {
+      width: 90%;
+    }
+  }
+  &__text {
+    user-select: none;
+    span {
+      font-family: cursive;
+      font-size: 22.5px;
+      font-weight: 600;
+      color: $red;
+    }
+  }
+  &__img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 35px;
+  }
+
+  &__profile {
+    position: absolute;
+    left: 5rem;
+    bottom: -2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Josefin Slab", serif;
+    font-size: 17px;
+  }
+}
+
+.swiper-slide {
+  filter: blur(2px) !important;
+  transform: scale(0.8) !important;
+  transition: all 0.2s;
+}
+.swiper-slide-active {
+  filter: blur(0) !important;
+  transform: scale(1) !important;
+}
+
+.swiper-tools {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+  padding: 0 4rem 0 2rem;
+  @media (min-width: 1056px) {
+    & {
+      flex-direction: row;
+    }
+  }
+}
+
+.swiper__buttons {
+  display: flex;
+  button {
+    position: relative;
+    background: transparent;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    user-select: none;
+    border: 1px solid white;
+    margin-right: 2rem;
+    top: 325px;
+    &:hover {
+      background: #9cb6eb37;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  // position: relative !important;
+  width: 35px !important;
+  height: 4px !important;
+  border-radius: 35px !important;
+  background-color: #fff !important;
+  @media (max-width: 464px) {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 10px !important;
+    height: 5px !important;
+    rotate: 90deg;
+  }
+}
+.swiper-pagination-bullet-active {
+  // position: relative !important;
+  width: 70px !important;
+  @media (max-width: 464px) {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 15px !important;
+    height: 5px !important;
+    rotate: 90deg;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+  // display: flex;
+  margin-bottom: 35px;
+}
