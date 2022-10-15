@@ -1,9 +1,12 @@
 {
   "name": "d3_portfolio",
+  "homepage": "https://PriyanshuKansal.github.io/professional_portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "parcel src/index.html--open",
     "build": "parcel build src/index.html"
   },
@@ -11,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "gsap": "^3.11.1",
     "imagesloaded": "^5.0.0",
     "node-modules": "^1.0.1",
